@@ -1,0 +1,68 @@
+.FullPostuser {
+    width: 80%;
+    height: 175px;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 3px 2px #ccc;
+    text-align: center;
+    background-color: aliceblue;
+
+}
+
+
+
+.delete button {
+    margin: 1rem auto;
+    font-size: 1rem;
+    background-color: red;
+    border: 1px solid red;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    color: #2c2922;
+}
+
+.delete button:hover,
+.delete button:active {
+    color: #ffffff;
+}
+
+.delete button.Delete {
+    color: red;
+}
+
+.delete button.Delete:hover,
+.delete button.Delete:active {
+    color: darkred;
+}
+
+
+
+.edit button {
+    margin: 1rem auto;
+    font-size: 1rem;
+    background-color: green;
+    border: 1px solid green;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    color: #2c2922;
+}
+
+.edit button:hover,
+.edit button:active {
+    color: #ffffff;
+}
+
+.edit button.Delete {
+    color: green;
+}
+
+.edit button.Delete:hover,
+.edit button.Delete:active {
+    color: olivedrab;
+}
+
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+}

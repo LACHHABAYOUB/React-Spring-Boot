@@ -1,0 +1,43 @@
+.Post {
+    width: 250px;
+    height: 200px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 3px 4px #ccc;
+    margin: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: aliceblue;
+}
+
+.Post:hover,
+.Post:active {
+    background-color: #C0DDF5;
+}
+
+.Author {
+    margin: 16px 0;
+    color: black;
+}
+
+.Post button {
+    margin: 1rem auto;
+    font-size: 1rem;
+    background-color: #ffbb00;
+    border: 1px solid #ffbb00;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    color: #2c2922;
+  }
+
+  .Post button:hover,
+  .Post button:active {
+    background-color: #ffa600;
+    border-color: #ffa600;
+  }
+
+
+  .center{
+      text-align: center;
+  }

@@ -1,0 +1,56 @@
+import axios from 'axios';
+import React, { useState, useContext, useRef } from 'react';
+import { APIConfig } from '../../store/API-Config';
+
+import './NewPost.css';
+
+const NewPost = (props) => {
+
+    const APIs = useContext(APIConfig);
+    const postAPI = APIs.postAPI;
+
+
+    // const titleInput = useRef();
+    // const contentInput = useRef();
+    // const authorInput = useRef();
+
+    const [post, setPost] = useState({
+        title: '',
+        content: '',
+        author: 'Dean',
+    });
+
+    const PostDataHandler = () => {
+        
+        const data = { ...post };
+        axios.post(postAPI, data)
+            .then(data => {
+                console.log('Success:', data);
+                props.history.push('/posts'); // push will add it to the page stack, replace will just replace the component  // props.history.replace('/posts'); 
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+
+
+    return (
+        <div className="NewPost">
+            <h1>Add a Post</h1>
+            <label>Title</label>
+           
+            <input type="text"  value={post.title} onChange={(event) => setPost({ ...post, title: event.target.value })} /> 
+            <label>Content</label>
+            <textarea rows="4" value={post.content} onChange={(event) => setPost({ ...post, content: event.target.value })} />
+            <label>Author</label>
+            <select  value={post.author} onChange={(event) => setPost({ ...post, author: event.target.value })}>
+                <option value="Dean">Dean</option>
+                <option value="Moe">Moe</option>
+            </select>
+            <button onClick={PostDataHandler}>Add Post</button>
+        </div>
+    );
+}
+
+
+export default NewPost;

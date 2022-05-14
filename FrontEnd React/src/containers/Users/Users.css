@@ -1,0 +1,20 @@
+.Posts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+}
+
+
+
+
+.Blog li {
+    display: inline-block;
+    margin: 10px;
+}
+
+
+.center{
+    text-align: center;
+}
